@@ -1,12 +1,16 @@
 #include "RFIDController.h"
 #include <Arduino.h>
 
-RFIDController::RFIDController() : mfrc522(portas[0], portas[4]) {
+RFIDController::RFIDController() : mfrc522(portas[0], portas[6]) {
+    // PORTAS DO RFID, esta na sequencia com o leitor virado para cima, a porta IRQ nao sera usada!
     this->portas[0] = 10;  // SDA
     this->portas[1] = 13;  // SCK
     this->portas[2] = 11;  // MOSI
     this->portas[3] = 12;  // MISO
-    this->portas[4] = 9;   // RST
+    this->portas[4] = NULL; // IRQ
+    this->portas[5] = NULL; // PORTA GND
+    this->portas[6] = 9;   // RST
+    this->portas[7] = NULL; // PORTA 5V
 }
 
 void RFIDController::iniciar() {
