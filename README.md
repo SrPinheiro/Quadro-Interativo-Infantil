@@ -1,5 +1,5 @@
 # Quadro interativo infantil
-## Projeto quadro interativo infantil para ser apresentado na CBR 2024
+### Projeto quadro interativo infantil para ser apresentado na CBR 2024
 
 ## Portas
 ### RFID
